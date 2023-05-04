@@ -1,0 +1,152 @@
+newman run DataDriven.postman_collection.json -e DataDriven.postman_environment.json --iteration-data Data.csv --iteration-count 3
+
+
+
+Microsoft Windows [Version 10.0.19045.2846]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>node -v
+v20.0.0
+
+C:\WINDOWS\system32>npm install -g newman
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+
+changed 112 packages in 19s
+
+6 packages are looking for funding
+  run `npm fund` for details
+npm notice
+npm notice New patch version of npm available! 9.6.4 -> 9.6.5
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v9.6.5
+npm notice Run npm install -g npm@9.6.5 to update!
+npm notice
+
+C:\WINDOWS\system32>cd C:\Users\krishna.vadher\Documents\Postman\reqres.in data
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data>newman run PostmanTestCollection.reqres.in from csv.postman_collection.json -e reqres.in.postman_environment.json -d Data.csv
+error: collection could not be loaded
+  unable to read data from file "PostmanTestCollection.reqres.in"
+  ENOENT: no such file or directory, open 'C:\Users\krishna.vadher\Documents\Postman\reqres.in data\PostmanTestCollection.reqres.in'
+
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data>newman run reqres.in from csv.postman_collection.json -e reqres.in.postman_environment.json -d Data.csv
+error: collection could not be loaded
+  unable to read data from file "reqres.in"
+  ENOENT: no such file or directory, open 'C:\Users\krishna.vadher\Documents\Postman\reqres.in data\reqres.in'
+
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data>newman run reqres.in.postman_collection.json -e reqres.in.postman_environment.json --iteration-data Data.csv --iteration-count 3
+error: collection could not be loaded
+  unable to read data from file "reqres.in.postman_collection.json"
+  ENOENT: no such file or directory, open 'C:\Users\krishna.vadher\Documents\Postman\reqres.in data\reqres.in.postman_collection.json'
+
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data>newman run reqres.in from csv.postman_collection.json -e reqres.in.postman_environment.json --iteration-data Data.csv --iteration-count 3
+error: collection could not be loaded
+  unable to read data from file "reqres.in"
+  ENOENT: no such file or directory, open 'C:\Users\krishna.vadher\Documents\Postman\reqres.in data\reqres.in'
+
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data>newman run DataDriven.postman_collection.json -e DataDriven.postman_environment.json --iteration-data Data.csv --iteration-count 3
+newman
+
+DataDriven
+
+Iteration 1/3
+
+→ {{url}}/api/users
+  POST https://reqres.in/api/users [201 Created, 750B, 560ms]
+  √  Status code is 201
+  √  Check name hugo
+  √  Check job leader
+
+Iteration 2/3
+
+→ {{url}}/api/users
+  POST https://reqres.in/api/users [201 Created, 740B, 409ms]
+  √  Status code is 201
+  √  Check name mike
+  √  Check job developer
+
+Iteration 3/3
+
+→ {{url}}/api/users
+  POST https://reqres.in/api/users [201 Created, 736B, 413ms]
+  √  Status code is 201
+  √  Check name elis
+  √  Check job designer
+
+┌─────────────────────────┬────────────────────┬────────────────────┐
+│                         │           executed │             failed │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              iterations │                  3 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│                requests │                  3 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│            test-scripts │                  3 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│      prerequest-scripts │                  0 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              assertions │                  9 │                  0 │
+├─────────────────────────┴────────────────────┴────────────────────┤
+│ total run duration: 1637ms                                        │
+├───────────────────────────────────────────────────────────────────┤
+│ total data received: 244B (approx)                                │
+├───────────────────────────────────────────────────────────────────┤
+│ average response time: 460ms [min: 409ms, max: 560ms, s.d.: 70ms] │
+└───────────────────────────────────────────────────────────────────┘
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data> newman run DataDriven.postman_collection.json -e DataDriven.postman_environment.json --iteration-data Data.csv --iteration-count 3 --reporters cli,htmlextra
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data>newman run DataDriven.postman_collection.json -e DataDriven.postman_environment.json --iteration-data Data.csv --iteration-count 3 --reporters cli,htmlextra
+newman
+
+DataDriven
+
+Iteration 1/3
+
+→ {{url}}/api/users
+  POST https://reqres.in/api/users [201 Created, 737B, 738ms]
+  √  Status code is 201
+  √  Check name hugo
+  √  Check job leader
+
+Iteration 2/3
+
+→ {{url}}/api/users
+  POST https://reqres.in/api/users [201 Created, 743B, 425ms]
+  √  Status code is 201
+  √  Check name mike
+  √  Check job developer
+
+Iteration 3/3
+
+→ {{url}}/api/users
+  POST https://reqres.in/api/users [201 Created, 742B, 413ms]
+  √  Status code is 201
+  √  Check name elis
+  √  Check job designer
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   3 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                   3 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                   3 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                   0 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                   9 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 1857ms                                         │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 244B (approx)                                 │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 525ms [min: 413ms, max: 738ms, s.d.: 150ms] │
+└────────────────────────────────────────────────────────────────────┘
+
+C:\Users\krishna.vadher\Documents\Postman\reqres.in data>
